@@ -3,7 +3,7 @@
 Веб-игра в стиле казино, созданная на чистом HTML/CSS/JS.
 
 ## 🔗 Демо
-[Открыть игру](https://твой_никнейм.github.io/koleso-depa/)
+[Открыть игру]((https://deputat-kolesodepa-deputatsk.netlify.app))
 
 ## 🛠 Стек
 - HTML5, CSS3 (Grid, Flexbox, анимации)
