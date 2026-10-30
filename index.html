@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#0f1115">
+<title>Колесо Депа</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-gradient"></div>
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- ========== ГЛАВНОЕ МЕНЮ ========== -->
+<div class="app" id="menuScreen">
+  
+  <header class="app-header">
+    <div class="brand" id="title">
+      <div class="brand-logo" style="background: none; padding: 0; overflow: hidden;">
+        <img src="logo.webp" alt="Колесо Депа" style="width: 100%; height: 100%; object-fit: cover; border-radius: 12px;">
+      </div>
+      <div class="brand-text">
+        <div class="brand-title">Колесо Депа</div>
+        <div class="brand-sub">Депутатское казино</div>
+      </div>
+    </div>
+    <div class="header-actions">
+      <button class="icon-btn" id="themeToggle" title="Тема">🌙</button>
+      <button class="icon-btn" id="soundToggle" title="Звук">🔊</button>
+      <button class="icon-btn" id="notifToggle" title="Уведомления">🔔</button>
+    </div>
+  </header>
+  
+  <div class="balances-row">
+    <div class="balance-box">
+      <span class="balance-icon">💰</span>
+      <div>
+        <div class="balance-label">Депутатки</div>
+        <div class="balance-value"><span id="balance">1000</span></div>
+      </div>
+      <button id="workBtn" class="mini-work-btn" title="Заработать депутатки">🔨</button>
+    </div>
+    <div class="balance-box gold">
+      <span class="balance-icon">💎</span>
+      <div>
+        <div class="balance-label">Деп. золото</div>
+        <div class="balance-value"><span id="goldBalance">0</span></div>
+      </div>
+    </div>
+  </div>
+  
+ 
+  
+  <div class="jackpot-strip" id="jackpotBanner">
+    <div class="jackpot-icon">🎰</div>
+    <div class="jackpot-info">
+      <div class="jackpot-label">Прогрессивный джекпот</div>
+      <div class="jackpot-value" id="jackpotValue">100 000</div>
+    </div>
+  </div>
+  
+  <nav class="main-tabs">
+    <button class="main-tab active" data-main="games">🎮 Игры</button>
+    <button class="main-tab" data-main="investors">🏆 Инвесторы</button>
+    <button class="main-tab" data-main="achievements">🎖 Достижения</button>
+  </nav>
+  
+  <section class="main-section" id="section-games">
+    <div class="games-grid" id="gamesGrid">
+      <button class="game-card" data-game="roulette"><div class="game-card-icon">🎡</div><div class="game-card-name">Колесо</div><div class="game-card-desc">37 секторов</div></button>
+      <button class="game-card" data-game="slots"><div class="game-card-icon">🎰</div><div class="game-card-name">Слоты</div><div class="game-card-desc">5 барабанов</div></button>
+      <button class="game-card" data-game="blackjack"><div class="game-card-icon">🃏</div><div class="game-card-name">Блэкджек</div><div class="game-card-desc">21 очко</div></button>
+      <button class="game-card" data-game="dice"><div class="game-card-icon">🎲</div><div class="game-card-name">Кости</div><div class="game-card-desc">3D-кубики</div></button>
+      <button class="game-card" data-game="safe"><div class="game-card-icon">💎</div><div class="game-card-name">Сейф</div><div class="game-card-desc">x4</div></button>
+      <button class="game-card" data-game="poker"><div class="game-card-icon">♠️</div><div class="game-card-name">Покер</div><div class="game-card-desc">Hold'em</div></button>
+      <button class="game-card" data-game="wheel-fortune"><div class="game-card-icon">🎯</div><div class="game-card-name">Фортуна</div><div class="game-card-desc">24 сектора</div></button>
+      <button class="game-card" data-game="scratch"><div class="game-card-icon">🎟️</div><div class="game-card-name">Скретч</div><div class="game-card-desc">3 из 9</div></button>
+      <button class="game-card" data-game="sport"><div class="game-card-icon">⚽</div><div class="game-card-name">Спорт</div><div class="game-card-desc">Live</div></button>
+      <button class="game-card" data-game="stock"><div class="game-card-icon">📈</div><div class="game-card-name">Биржа</div><div class="game-card-desc">Газдепа</div></button>
+      <button class="game-card" data-game="gov"><div class="game-card-icon">🏛️</div><div class="game-card-name">Госзакупки</div><div class="game-card-desc">Освой бюджет</div></button>
+      <button class="game-card" data-game="live"><div class="game-card-icon">🎥</div><div class="game-card-name">Live-казино</div><div class="game-card-desc">Эфир</div></button>
+      <button class="game-card" data-game="chat"><div class="game-card-icon">🤖</div><div class="game-card-name">Чат с ИИ</div><div class="game-card-desc">Поговори</div></button>
+      <button class="game-card" data-game="bribe"><div class="game-card-icon">🚔</div><div class="game-card-name">Отмазка</div><div class="game-card-desc">Прокуратура</div></button>
+    </div>
+  </section>
+  
+  <section class="main-section hidden" id="section-investors">
+    <div class="investors-tabs">
+      <button class="inv-tab active" data-inv="top"><span class="inv-tab-icon">🏆</span><span class="inv-tab-label">Лучшие</span></button>
+      <button class="inv-tab" data-inv="vip"><span class="inv-tab-icon">👑</span><span class="inv-tab-label">VIP</span></button>
+      <button class="inv-tab" data-inv="low"><span class="inv-tab-icon">📉</span><span class="inv-tab-label">Низшие</span></button>
+    </div>
+    <div class="investors-panel" id="leadersPanel"></div>
+  </section>
+  
+  <section class="main-section hidden" id="section-achievements">
+    <div class="achievements-grid" id="achievementsGrid"></div>
+  </section>
+  
+  <button class="shop-toggle" id="shopToggle">
+    <span>🏪 Магазин и Золото</span>
+    <span class="shop-toggle-arrow">›</span>
+  </button>
+  
+  <div class="shop" id="shop">
+    <div class="shop-tabs">
+      <button class="shop-tab active" data-tab="deposits">💰 Депозиты</button>
+      <button class="shop-tab" data-tab="gold">💎 Золото</button>
+      <button class="shop-tab" data-tab="credit">💳 Кредит</button>
+    </div>
+    
+    <!-- ДЕПОЗИТЫ -->
+    <div class="shop-content" id="tab-deposits">
+      <div class="shop-item"><div class="shop-item-info"><div class="shop-item-name">🚗 Депнуть тачку</div><div class="shop-item-desc">Продал BMW — занёс в кассу</div></div><button class="buy-btn" data-amount="1000" data-type="deposit">+1 000</button></div>
+      <div class="shop-item"><div class="shop-item-info"><div class="shop-item-name">🏠 Депнуть хату</div><div class="shop-item-desc">Двушка в Мытищах</div></div><button class="buy-btn" data-amount="5000" data-type="deposit">+5 000</button></div>
+      <div class="shop-item"><div class="shop-item-info"><div class="shop-item-name">🏝️ Депнуть дачу</div><div class="shop-item-desc">Шесть соток и банька</div></div><button class="buy-btn" data-amount="15000" data-type="deposit">+15 000</button></div>
+      <div class="shop-item"><div class="shop-item-info"><div class="shop-item-name">🏛️ Депнуть бюджет</div><div class="shop-item-desc">Освоил на благоустройство</div></div><button class="buy-btn" data-amount="250000" data-type="deposit">+250 000</button></div>
+    </div>
+    
+    <!-- ЗОЛОТО (ТРАТЫ) -->
+    <div class="shop-content hidden" id="tab-gold">
+      <div class="nfc-zone" id="nfcZone">
+        <div class="nfc-icon">📡</div>
+        <div class="nfc-text">Приложи NFC-метку</div>
+        <div class="nfc-hint">Пополнение депутатского золота</div>
+      </div>
+      <div class="info-box warn">⚠️ NFC работает только на Android в Chrome. Используй «Симуляцию».</div>
+      
+      <div class="shop-item"><div class="shop-item-info"><div class="shop-item-name">📱 Симуляция NFC</div><div class="shop-item-desc">+10 золота</div></div><button class="buy-btn gold" id="simulateNfc">+10 💎</button></div>
+      
+      <h3 style="margin: 10px 0 5px; font-size: 14px; color: var(--gold);">Куда потратить золото:</h3>
+      
+      <div class="shop-item"><div class="shop-item-info"><div class="shop-item-name">🛡️ Страховка ставки</div><div class="shop-item-desc">Вернёт ставку при проигрыше (1 раз)</div></div><button class="buy-btn gold" data-goldbuy="insurance">1 💎</button></div>
+      
+      <div class="shop-item"><div class="shop-item-info"><div class="shop-item-name">🎰 Читерский спин</div><div class="shop-item-desc">Гарантированная победа в следующем спине</div></div><button class="buy-btn gold" data-goldbuy="cheat_spin">5 💎</button></div>
+      
+      <div class="shop-item"><div class="shop-item-info"><div class="shop-item-name">💼 VIP-статус (24ч)</div><div class="shop-item-desc">Х2 к заработку и эксклюзивный значок</div></div><button class="buy-btn gold" data-goldbuy="vip">15 💎</button></div>
+    </div>
+    
+    <!-- КРЕДИТ -->
+    <div class="shop-content hidden" id="tab-credit">
+      <div class="info-box warn" id="creditStatus">Возьми 10 000 — вернёшь 50 000.</div>
+      <div class="shop-item"><div class="shop-item-info"><div class="shop-item-name">💳 Взять кредит</div><div class="shop-item-desc">+10 000 сейчас</div></div><button class="buy-btn" id="takeCreditBtn">Взять</button></div>
+      <div class="shop-item" id="repayRow" style="display:none;"><div class="shop-item-info"><div class="shop-item-name">💰 Вернуть кредит</div><div class="shop-item-desc" id="repayDesc">−50 000</div></div><button class="buy-btn danger" id="repayCreditBtn">Вернуть</button></div>
+    </div>
+    <button class="reset-btn" id="resetBtn">🔄 Сбросить прогресс</button>
+  </div>
+</div>
+
+<!-- ========== ЭКРАН ИГРЫ ========== -->
+<div class="app hidden" id="gameScreen" style="padding-bottom: 180px;">
+  
+  <header class="app-header">
+    <button class="back-btn" id="backBtn"><span>←</span> Назад</button>
+    <div class="header-balances">
+      <div class="mini-balance"><span class="mini-icon">💰</span><span id="balanceGame">1000</span></div>
+      <div class="mini-balance gold"><span class="mini-icon">💎</span><span id="goldBalanceGame">0</span></div>
+    </div>
+  </header>
+  
+  <div class="game-header">
+    <h2 class="game-title" id="gameTitle">Колесо</h2>
+    <div class="casino-mood" id="casinoMoodGame"><span id="moodIconGame">👁️</span> <span id="moodTextGame">Наблюдает...</span></div>
+  </div>
+  
+  <div class="fair-mode-banner" id="fairModeBanner">🕊️ Честная игра (осталось: <span id="fairSpinsLeft">3</span>)</div>
+  
+  <!-- Сюда JS будет вставлять контент игры -->
+  <div class="game-content" id="gameContent"></div>
+  
+  <div class="stats-bar">
+    <div class="stat-item"><div class="stat-icon">🎯</div><div class="stat-info"><div class="stat-label">Побед</div><div class="stat-value" id="wins">0</div></div></div>
+    <div class="stat-item"><div class="stat-icon">💀</div><div class="stat-info"><div class="stat-label">Проигр.</div><div class="stat-value" id="losses">0</div></div></div>
+    <div class="stat-item"><div class="stat-icon">📉</div><div class="stat-info"><div class="stat-label">Профит</div><div class="stat-value" id="profit">0</div></div></div>
+  </div>
+
+  <!-- ПРИЖАТАЯ ПАНЕЛЬ СТАВОК -->
+  <div class="sticky-bet-bar" id="stickyBetBar">
+    <div class="sticky-row">
+      <div class="bet-input-wrapper">
+        <input type="number" id="customBetInput" class="custom-bet-input" value="100" min="10">
+        <button id="betAllBtn" class="mini-btn">ВСЁ</button>
+      </div>
+      <div class="bet-presets">
+        <button class="bet-preset" data-amt="10">10</button>
+        <button class="bet-preset" data-amt="50">50</button>
+        <button class="bet-preset active" data-amt="100">100</button>
+        <button class="bet-preset" data-amt="500">500</button>
+        <button class="bet-preset" data-amt="1000">1k</button>
+        <button class="bet-preset" data-amt="5000">5k</button>
+      </div>
+    </div>
+    <div id="dynamicGameAction" class="dynamic-action">
+      <!-- Кнопка действия будет вставлена через JS -->
+    </div>
+  </div>
+  
+  <div class="result-toast" id="gameResultToast"></div>
+</div>
+
+<script src="game.js"></script>
+</body>
+</html>
